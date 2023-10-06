@@ -24,7 +24,7 @@ export default function Card(props){
                   'Saturn',
                   'True',
                   'False',
-                  'Milky Way',
+                  'Milky Way Galaxy',
                   'Exoplanet',
                   'Astronomy'];
   const altAnswers = ['Eight',
@@ -34,7 +34,7 @@ export default function Card(props){
                   '',
                   '',
                   '',
-                  'Milky Way Galaxy',
+                  'Milky Way',
                   'Extrasolar',
                   ''];
   
@@ -43,6 +43,7 @@ export default function Card(props){
   const handleNext = () => {
     if (cardNum + 1 < questions.length) setCardNum(cardNum + 1);
     if (isFlipped) handleFlip();
+    
     setGuess('');
     setCheckAnswer('');
   }
@@ -50,24 +51,32 @@ export default function Card(props){
   const handlePrev = () => {
     if (cardNum - 1 >= 0) setCardNum(cardNum - 1);
     if (isFlipped) handleFlip();
+
     setGuess('');
     setCheckAnswer('');
   }
 
   const handleCheckAnswer = (event) => {
     event.preventDefault();
+
     if (guess == '') {
       setCheckAnswer('wrong');
       return;
     }
-    guess.toLowerCase() == answers[cardNum].toLowerCase() || guess.toLowerCase() == altAnswers[cardNum].toLowerCase() ? setCheckAnswer('correct') : setCheckAnswer('wrong');
+
+    if (guess.toLowerCase() == answers[cardNum].toLowerCase() || 
+        guess.toLowerCase() == altAnswers[cardNum].toLowerCase()) {
+      setCheckAnswer('correct');
+    } else {
+      setCheckAnswer('wrong');
+    }
   }
 
   return (
     <>
     <p>Number of cards: {questions.length}</p>
     <div onClick={handleFlip} className="cardContainer">
-    <p>{isFlipped ? (altAnswers[cardNum] != '' && altAnswers[cardNum] != 'Eight' ? answers[cardNum] + ' / ' + altAnswers[cardNum] : answers[cardNum]) : questions[cardNum]}</p>
+    <p>{isFlipped ? (altAnswers[cardNum] != '' && altAnswers[cardNum] != 'Eight' && altAnswers[cardNum] != 'Milky Way' ? answers[cardNum] + ' / ' + altAnswers[cardNum] : answers[cardNum]) : questions[cardNum]}</p>
     </div>
     <form>
       Your Best Guess: <input type='text' value={guess} onChange={event => setGuess(event.target.value)} id={checkAnswer}></input>
