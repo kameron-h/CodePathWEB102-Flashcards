@@ -1,8 +1,8 @@
-# Web Development Project 2 - *Flashcards*
+# Web Development Project 3 - *Flashcards*
 
 Submitted by: **Kameron Harrison**
 
-This web app: **Space Trivia: Test your knowledge of the cosmos!**
+This web app: **Test your knowledge of the cosmos!**
 
 Time spent: **5** hours spent in total
 
@@ -10,29 +10,30 @@ Time spent: **5** hours spent in total
 
 The following **required** functionality is completed:
 
-- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [x] **A list of card pairs is created**
-- [x] **Clicking on the card shows the corresponding component of the information pair**
-- [x] **Clicking the next button displays a random new card**
+- [x] **The user can enter their guess in a box before seeing the flipside of the card**
+- [x] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [x] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
-- [ ] Cards contain images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
+- [ ] A shuffle button is used to randomize the order of the cards
+- [x] A user's answer may be counted as correct even when it is slightly different from the target answer
+- [ ] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
-* [x] Enhanced display with CSS styling
+* [x] Certain questions have more than one possible correct answer
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
-<img src='WEB102 Flashcards Project.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with LICEcap 
+GIF created with LICEcap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -40,7 +41,7 @@ GIF created with LICEcap
 
 ## Notes
 
-The most challenging part of creating this app was figuring out how to flip the card between the question & answer.
+The most challenging part of building the web app was ensuring that the user's answer would be marked as correct regardless of formatting.
 
 ## License
 
