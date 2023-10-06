@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { useState } from 'react';
 
-export default function Card(props){
+export default function Card(){
   const [isFlipped, setIsFlipped] = useState(false);
   const [cardNum, setCardNum] = useState(0);
   const [checkAnswer, setCheckAnswer] = useState('');
@@ -43,7 +43,7 @@ export default function Card(props){
   const handleNext = () => {
     if (cardNum + 1 < questions.length) setCardNum(cardNum + 1);
     if (isFlipped) handleFlip();
-    
+
     setGuess('');
     setCheckAnswer('');
   }
