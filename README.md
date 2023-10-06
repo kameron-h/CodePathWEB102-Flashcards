@@ -1,4 +1,4 @@
-# Web Development Project 3 - *Flashcards*
+# Web Development Project 3 - *Space Trivia*
 
 Submitted by: **Kameron Harrison**
 
